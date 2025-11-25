@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyBuy - 行程</title>
+    <link rel="stylesheet" href="../lib/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item has-text-weight-bold" href="#">
+                EasyBuy
+            </a>
+            <a class="navbar-item is-pulled-right" id="logoutBtn">
+                <span class="icon">
+                    <i class="fas fa-sign-out-alt"></i>
+                </span>
+            </a>
+        </div>
+    </nav>
+
+    <section class="section" style="padding-bottom: 70px;">
+        <div class="container">
+            <h2 class="title is-4">即將到來的行程</h2>
+            <div id="scheduleList">
+                <!-- 行程將在此載入 -->
+            </div>
+        </div>
+    </section>
+
+    <div class="bottom-nav">
+        <a href="index.html" class="button is-white has-text-primary">
+            <span class="icon"><i class="fas fa-calendar-alt"></i></span>
+            <span>行程</span>
+        </a>
+        <a href="order.html" class="button is-white">
+            <span class="icon"><i class="fas fa-file-invoice-dollar"></i></span>
+            <span>訂單</span>
+        </a>
+    </div>
+
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../lib/mock_data.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyBuy - 購物車</title>
+    <link rel="stylesheet" href="../lib/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar is-primary is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <span class="icon"><i class="fas fa-arrow-left"></i></span>
+            </a>
+            <div class="navbar-item has-text-weight-bold">
+                <span id="scheduleTitle">購物車</span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section" style="padding-top: 60px;">
+        <div class="container">
+            <div class="notification is-warning is-light mb-5">
+                <button class="delete"></button>
+                <span class="icon-text">
+                    <span class="icon has-text-warning-dark">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </span>
+                    <span class="has-text-weight-medium">
+                        你在這裡訂購的產品我們都能看到，並且會為您購買，請在截止日期之前確認，截止日期後就不能修改，謝謝
+                    </span>
+                </span>
+            </div>
+            <div id="cartList">
+                <!-- 購物車商品將在此載入 -->
+            </div>
+            <div id="cartSummary" class="box mt-4 is-hidden">
+                <div class="columns is-mobile is-vcentered">
+                    <div class="column">
+                        <p class="has-text-weight-bold">總數量: <span id="totalQuantity">0</span></p>
+                    </div>
+                    <div class="column has-text-right">
+                        <p class="title is-5 has-text-primary">總金額: <span id="totalAmount">0</span> <span
+                                id="currencyLabel"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../lib/mock_data.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="utf-8">
+    <title>會員管理</title>
+    <link rel="stylesheet" href="../lib/layui/layui.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo">EasyBuy 管理後台</div>
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item"><a href="#" id="logoutBtn">登出</a></li>
+            </ul>
+        </div>
+
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <ul class="layui-nav layui-nav-tree">
+                    <li class="layui-nav-item"><a href="index.html">儀表板</a></li>
+                    <li class="layui-nav-item"><a href="schedules.html">日程管理</a></li>
+                    <li class="layui-nav-item"><a href="products.html">產品管理</a></li>
+                    <li class="layui-nav-item layui-this"><a href="members.html">會員管理</a></li>
+                    <li class="layui-nav-item"><a href="tobuy.html">待購清單</a></li>
+                    <li class="layui-nav-item"><a href="orders.html">訂單與結算</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="layui-body">
+            <div style="padding: 15px;">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        會員列表
+                        <button class="layui-btn layui-btn-sm layui-btn-normal" style="float: right; margin-top: 5px;"
+                            id="addMemberBtn">新增會員</button>
+                    </div>
+                    <div class="layui-card-body">
+                        <table id="memberTable" lay-filter="memberTable"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 新增/編輯表單模板 -->
+    <script type="text/html" id="memberForm">
+        <form class="layui-form" style="padding: 20px;" lay-filter="formTest">
+            <div class="layui-form-item">
+                <label class="layui-form-label">姓名</label>
+                <div class="layui-input-block">
+                    <input type="text" name="name" required lay-verify="required" placeholder="姓名" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">電話</label>
+                <div class="layui-input-block">
+                    <input type="text" name="phone" required lay-verify="required" placeholder="電話" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">密碼</label>
+                <div class="layui-input-block">
+                    <input type="text" name="password" required lay-verify="required" placeholder="密碼" class="layui-input" value="123">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="saveMember">儲存</button>
+                </div>
+            </div>
+        </form>
+    </script>
+
+    <script type="text/html" id="barDemo">
+        <a class="layui-btn layui-btn-xs" lay-event="edit">編輯</a>
+        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">刪除</a>
+    </script>
+
+    <script src="../lib/layui/layui.js"></script>
+    <script src="../lib/mock_data.js"></script>
+    <script src="js/members.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyBuy - 產品</title>
+    <link rel="stylesheet" href="../lib/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -5px;
+        }
+
+        .product-item {
+            width: 50%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .product-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-content {
+            flex-grow: 1;
+            padding: 10px;
+        }
+
+        .product-price {
+            color: #ff3860;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar is-primary is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <span class="icon"><i class="fas fa-arrow-left"></i></span>
+            </a>
+            <div class="navbar-item has-text-weight-bold">
+                產品列表
+            </div>
+        </div>
+    </nav>
+
+    <section class="section" style="padding-top: 60px;">
+        <div class="container">
+            <div id="productList" class="product-grid">
+                <!-- 產品將在此載入 -->
+            </div>
+        </div>
+    </section>
+
+    <div class="bottom-nav">
+        <a href="index.html" class="button is-white has-text-primary">
+            <span class="icon"><i class="fas fa-calendar-alt"></i></span>
+            <span>行程</span>
+        </a>
+        <a href="order.html" class="button is-white">
+            <span class="icon"><i class="fas fa-file-invoice-dollar"></i></span>
+            <span>訂單</span>
+        </a>
+    </div>
+
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../lib/mock_data.js"></script>
+    <script src="js/products.js"></script>
+</body>
+
+</html>

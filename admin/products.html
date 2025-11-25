@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="utf-8">
+    <title>產品管理</title>
+    <link rel="stylesheet" href="../lib/layui/layui.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo">EasyBuy 管理後台</div>
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item"><a href="#" id="logoutBtn">登出</a></li>
+            </ul>
+        </div>
+
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <ul class="layui-nav layui-nav-tree">
+                    <li class="layui-nav-item"><a href="index.html">儀表板</a></li>
+                    <li class="layui-nav-item"><a href="schedules.html">日程管理</a></li>
+                    <li class="layui-nav-item layui-this"><a href="products.html">產品管理</a></li>
+                    <li class="layui-nav-item"><a href="members.html">會員管理</a></li>
+                    <li class="layui-nav-item"><a href="tobuy.html">待購清單</a></li>
+                    <li class="layui-nav-item"><a href="orders.html">訂單與結算</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="layui-body">
+            <div style="padding: 15px;">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        產品列表
+                        <button class="layui-btn layui-btn-sm layui-btn-normal" style="float: right; margin-top: 5px;"
+                            id="addProductBtn">新增產品</button>
+                    </div>
+                    <div class="layui-card-body">
+                        <table id="productTable" lay-filter="productTable"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 新增/編輯表單模板 -->
+    <script type="text/html" id="productForm">
+        <form class="layui-form" style="padding: 20px;" lay-filter="formTest">
+            <div class="layui-form-item">
+                <label class="layui-form-label">名稱</label>
+                <div class="layui-input-block">
+                    <input type="text" name="name" required lay-verify="required" placeholder="產品名稱" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">日程</label>
+                <div class="layui-input-block">
+                    <select name="scheduleId" id="scheduleSelect" lay-verify="required">
+                        <option value="">選擇日程</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">價格</label>
+                <div class="layui-input-block">
+                    <input type="number" name="price" required lay-verify="required" placeholder="價格" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">幣種</label>
+                <div class="layui-input-block">
+                    <select name="currency" lay-verify="required">
+                        <option value="JPY">JPY</option>
+                        <option value="KRW">KRW</option>
+                        <option value="USD">USD</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">圖片 URL</label>
+                <div class="layui-input-block">
+                    <input type="text" name="image" placeholder="圖片 URL" class="layui-input" value="https://placehold.co/150">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">描述</label>
+                <div class="layui-input-block">
+                    <textarea name="desc" placeholder="描述" class="layui-textarea"></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="saveProduct">儲存</button>
+                </div>
+            </div>
+        </form>
+    </script>
+
+    <script type="text/html" id="barDemo">
+        <a class="layui-btn layui-btn-xs" lay-event="edit">編輯</a>
+        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">刪除</a>
+    </script>
+
+    <script src="../lib/layui/layui.js"></script>
+    <script src="../lib/mock_data.js"></script>
+    <script src="js/products.js"></script>
+</body>
+
+</html>

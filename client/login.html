@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyBuy 登入</title>
+    <link rel="stylesheet" href="../lib/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="section">
+        <div class="container login-container">
+            <h1 class="title has-text-centered">EasyBuy</h1>
+            <h2 class="subtitle has-text-centered">登入開始選購</h2>
+
+            <div class="box">
+                <div class="field">
+                    <label class="label">電話號碼</label>
+                    <div class="control">
+                        <input class="input" type="tel" id="phone" placeholder="例如: 13800138000" value="13800138000">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">密碼</label>
+                    <div class="control">
+                        <input class="input" type="password" id="password" placeholder="********" value="123">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="control">
+                        <button class="button is-primary is-fullwidth" id="loginBtn">登入</button>
+                    </div>
+                </div>
+                <p class="help is-danger is-hidden" id="errorMsg">帳號或密碼錯誤</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../lib/mock_data.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>
