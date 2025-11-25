@@ -40,7 +40,7 @@ layui.use(['table', 'layer', 'form'], function () {
             data: purchased,
             cols: [[
                 { field: 'id', title: 'ID', width: 80 },
-                { field: 'productName', title: '產品' },
+                { field: 'productName', title: '商品' },
                 { field: 'userName', title: '客戶' },
                 { field: 'price', title: '原價' },
                 { field: 'currency', title: '原幣種' },
@@ -54,7 +54,7 @@ layui.use(['table', 'layer', 'form'], function () {
             data: settled,
             cols: [[
                 { field: 'id', title: 'ID', width: 80 },
-                { field: 'productName', title: '產品' },
+                { field: 'productName', title: '商品' },
                 { field: 'userName', title: '客戶' },
                 { field: 'finalPrice', title: '最終價格' },
                 { field: 'finalCurrency', title: '幣種' },

@@ -29,11 +29,11 @@ layui.use(['table', 'form', 'layer'], function () {
     }
     renderTable();
 
-    // 新增產品
+    // 新增商品
     $('#addProductBtn').click(function () {
         layer.open({
             type: 1,
-            title: '新增產品',
+            title: '新增商品',
             area: ['500px', '600px'],
             content: $('#productForm').html(),
             success: function (layero, index) {
@@ -49,7 +49,7 @@ layui.use(['table', 'form', 'layer'], function () {
                     MockData.addProduct(data.field);
                     layer.close(index);
                     renderTable();
-                    layer.msg('產品已新增');
+                    layer.msg('商品已新增');
                     return false;
                 });
             }

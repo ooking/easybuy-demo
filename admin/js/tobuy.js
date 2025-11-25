@@ -37,7 +37,7 @@ layui.use(['table', 'layer'], function () {
             data: data,
             cols: [[
                 { field: 'id', title: 'ID', width: 80, sort: true },
-                { field: 'productName', title: '產品' },
+                { field: 'productName', title: '商品' },
                 { field: 'quantity', title: '數量', width: 80 },
                 { field: 'userName', title: '客戶' },
                 { field: 'price', title: '預估價格' },

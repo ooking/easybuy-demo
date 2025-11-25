@@ -36,7 +36,7 @@ $(document).ready(function () {
                     </div>
                     <footer class="card-footer">
                         <a href="products.html?scheduleId=${s.id}" class="card-footer-item has-text-primary">
-                            <span>選購產品</span>
+                            <span>選購商品</span>
                         </a>
                         <a href="cart.html?scheduleId=${s.id}" class="card-footer-item has-text-info">
                             <span class="icon"><i class="fas fa-shopping-cart"></i></span>

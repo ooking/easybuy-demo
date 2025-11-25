@@ -16,18 +16,18 @@ $(document).ready(function () {
         return;
     }
 
-    // 載入產品
+    // 載入商品
     const products = MockData.getProducts(scheduleId);
     const cartItems = MockData.getCart(user.id); // 獲取購物車項目
     const $list = $('#productList');
 
-    // 檢查產品是否在購物車中的輔助函數
+    // 檢查商品是否在購物車中的輔助函數
     function isProductInCart(productId) {
         return cartItems.some(item => item.productId == productId && (item.status !== 'purchased' && item.status !== 'settled'));
     }
 
     if (products.length === 0) {
-        $list.html('<p class="has-text-grey has-text-centered" style="width:100%; margin-top:20px;">此行程暫無產品。</p>');
+        $list.html('<p class="has-text-grey has-text-centered" style="width:100%; margin-top:20px;">此行程暫無商品。</p>');
     } else {
         products.forEach(p => {
             const inCart = isProductInCart(p.id);
