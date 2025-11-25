@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyBuy - 買手儀表板</title>
+    <link rel="stylesheet" href="../lib/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <span class="icon"><i class="fas fa-arrow-left"></i></span>
+            </a>
+            <div class="navbar-item has-text-weight-bold">
+                買手儀表板
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title is-4" id="scheduleTitle">行程名稱</h1>
+
+            <!-- 搜尋欄 -->
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="input" type="text" id="searchInput" placeholder="搜尋商品名稱...">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-search"></i>
+                    </span>
+                </p>
+            </div>
+
+            <!-- 商品列表 -->
+            <div id="buyerList">
+                <!-- 聚合商品將在此載入 -->
+            </div>
+        </div>
+    </section>
+
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../lib/mock_data.js"></script>
+    <script src="js/buyer.js"></script>
+</body>
+
+</html>

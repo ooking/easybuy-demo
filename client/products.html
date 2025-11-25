@@ -52,7 +52,7 @@
         </div>
     </nav>
 
-    <section class="section" style="padding-top: 60px;">
+    <section class="section" style="padding-top: 60px; padding-bottom: 80px;">
         <div class="container">
             <div id="productList" class="product-grid">
                 <!-- 商品將在此載入 -->
@@ -61,14 +61,48 @@
     </section>
 
     <div class="bottom-nav">
-        <a href="index.html" class="button is-white has-text-primary">
-            <span class="icon"><i class="fas fa-calendar-alt"></i></span>
-            <span>行程</span>
-        </a>
-        <a href="order.html" class="button is-white">
-            <span class="icon"><i class="fas fa-file-invoice-dollar"></i></span>
-            <span>訂單</span>
-        </a>
+        <div class="level is-mobile" style="width: 100%;">
+            <div class="level-left">
+                <div class="level-item">
+                    <div>
+                        <p class="heading" style="margin-bottom: 0;">已訂購</p>
+                        <p class="title is-6" id="footerTotalQuantity">0 件</p>
+                    </div>
+                </div>
+                <div class="level-item ml-4">
+                    <div>
+                        <p class="heading" style="margin-bottom: 0;">總計</p>
+                        <p class="title is-6" style="color: #ff3860;" id="footerTotalAmount">HKD 0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="level-right">
+                <div class="level-item">
+                    <div>
+                        <p class="heading" style="margin-bottom: 0; text-align: right;">截止訂購</p>
+                        <p class="title is-6" id="footerDeadline" style="color: #ff3860;">Loading...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 商品詳情 Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box">
+                <figure class="image is-4by3 mb-4">
+                    <img id="modalImage" src="" alt="Product Image">
+                </figure>
+                <h3 class="title is-4" id="modalTitle"></h3>
+                <p class="subtitle is-5 has-text-danger" id="modalPrice"></p>
+                <div class="content">
+                    <p id="modalDescription"></p>
+                </div>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
     </div>
 
     <script src="../lib/jquery.min.js"></script>
