@@ -143,7 +143,7 @@ $(document).ready(function () {
         } else {
             actionHtml = `
                 <button class="button is-small is-primary is-fullwidth mt-2 add-to-cart" data-id="${productId}">
-                    加入購物車
+                    訂購
                 </button>
             `;
         }
